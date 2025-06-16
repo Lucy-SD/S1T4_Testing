@@ -43,7 +43,7 @@ Command line: mvn test
 ## 📚 Exercise Catalog
 ### 📂 Level 1: JUnit Fundamentals
 
-<details> <summary><b>Exercise 1: Library Book Management</b></summary>
+<details> <summary><b>Exercise 1: Library Management System</b></summary>
 
 Create a Java class that manages a collection of books in a library. The class should allow you to add books, retrieve the list of books, get a specific book by its position, add a book at a specific position, and remove a book by title.
 
@@ -67,14 +67,14 @@ They verify that the list remains alphabetically sorted after adding or removing
 
 </details>
 
-<details> <summary><b>Exercise 2: DNI Calculator</b></summary>
+<details> <summary><b>Exercise 2: DNI Letter Calculator</b></summary>
   
 Create a class called CalculoDni that calculates the letter of the DNI when receiving the number as a parameter.
 Create a jUnit class that verifies its correct operation, parameterizing it so that the test receives a wide spectrum of data and validates whether the calculation is correct for 10 predefined ID numbers.
 
 </details>
 
-<details> <summary><b>Exercise 3: Out of Bounds Exception Testing</b></summary>
+<details> <summary><b>Exercise 3: Exception Handling</b></summary>
   
 Create a class with a method that throws an ArrayIndexOutOfBoundsException.
 Verify its correct operation with a jUnit test
