@@ -84,9 +84,13 @@ Verify its correct operation with a jUnit test
 
 ## 🎯 Learning Goals
 ✅ JUnit test creation  
+
 ✅ Parameterized testing  
+
 ✅ Exception testing  
+
 ✅ Maven test lifecycle  
+
 ✅ Collection validation  
 
 ## 🤝 Contributions
