@@ -26,7 +26,7 @@ This repository contains structured Java exercises focused on:
 
 ## 🛠️ Installation
 
-git clone https://github.com/Lucy-SD/S1T4_Testing
+git clone https://github.com/Lucy-SD/S1T4_Testing  
 cd java-junit-exercises
 mvn clean install
 
@@ -82,11 +82,11 @@ Verify its correct operation with a jUnit test
 </details>
 
 ## 🎯 Learning Goals
-✅ JUnit test creation
-✅ Parameterized testing
-✅ Exception testing
-✅ Maven test lifecycle
-✅ Collection validation
+✅ JUnit test creation  
+✅ Parameterized testing  
+✅ Exception testing  
+✅ Maven test lifecycle  
+✅ Collection validation  
 
 ## 🤝 Contributions
 ⭐ Star the repository
@@ -98,4 +98,4 @@ Verify its correct operation with a jUnit test
 ## 🌐 Deployment
 For educational purposes only.
 
-🚀 Thanks for Visiting ¡!
+## 🚀 Thanks for Visiting ¡!
