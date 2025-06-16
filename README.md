@@ -1,6 +1,6 @@
 # Java JUnit Testing Exercises
 
-👨‍💻 Author: Lucy Castro
+👨‍💻 Author: Lucy Castro  
 🧠 Learning Focus: JUnit Testing in Java  
 🛠️ IDE: IntelliJ IDEA  
 💡 Java SDK: 21  
