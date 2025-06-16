@@ -26,7 +26,8 @@ This repository contains structured Java exercises focused on:
 
 ## 🛠️ Installation
 
-git clone https://github.com/Lucy-SD/S1T4_Testing  
+git clone https://github.com/Lucy-SD/S1T4_Testing
+
 cd java-junit-exercises
 mvn clean install
 
