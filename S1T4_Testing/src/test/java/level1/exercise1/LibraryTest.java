@@ -28,7 +28,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testSizeAfterAddition() throws BookFoundException, NoBooksOnLibraryException {
+    public void testSizeAfterAddition() throws BookFoundException {
         library.addBook(new Book("Los Reyes del Mundo"));
         library.addBook(new Book("Los Invisibles"));
         library.addBook(new Book("Cada Vez que te Veo"));
@@ -40,7 +40,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testListContainsSpecificBookInCorrectPosition() throws BookFoundException, NoBooksOnLibraryException {
+    public void testListContainsSpecificBookInCorrectPosition() throws BookFoundException {
         library.addBook(new Book("A"));
         library.addBook(new Book("C"));
         library.addBook(new Book("B"));
@@ -60,7 +60,6 @@ public class LibraryTest {
     public void testNoDuplicateBookTitles() throws BookFoundException {
         Book unico = new Book("Único");
         library.addBook(unico);
-        boolean bookExists = false;
 
         Exception e = assertThrows(BookFoundException.class, () -> {
             library.addBook(unico);
@@ -71,7 +70,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testGetBookTitleByPosition() throws BookFoundException, NoBooksOnLibraryException {
+    public void testGetBookTitleByPosition() throws BookFoundException {
         library.addBook(new Book("Libro 1"));
         library.addBook(new Book("Libro 3"));
         Book libro2 = new Book("Libro 2");

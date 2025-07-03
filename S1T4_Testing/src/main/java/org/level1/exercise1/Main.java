@@ -6,16 +6,25 @@ import org.level1.exercise1.exceptions.NoBooksOnLibraryException;
 import org.level1.exercise1.model.Book;
 import org.level1.exercise1.model.Library;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
         Library library = new Library();
+
         Book book1 = new Book("Inés del Alma Mía");
         Book book2 = new Book("Reinventa las Reglas");
         Book book3 = new Book("A Cuento de Nada");
         Book book4 = new Book("Jugando al Olvido");
-        String answer;
 
+        List<Book> books = new ArrayList<>();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        String answer;
 
         System.out.println("\n   --- Ver Libros en Biblioteca vacía ---  ");
         try {
@@ -27,29 +36,14 @@ public class Main {
 
 
         System.out.println("\n   *** Añadir Libros *** ");
-        try {
-            library.addBook(book1);
-            answer = "Libro: " + book1.getTitle() + ", añadido correctamente.";
-        } catch (BookFoundException e) {
-            answer = e.getMessage();
+        for (Book book : books) {
+            try {
+                library.addBook(book);
+                System.out.println("Libro: " + book.getTitle() + ", añadido correctamente.");
+            } catch (BookFoundException e) {
+                System.out.println(e.getMessage());
+            }
         }
-        System.out.println(answer);
-
-        try {
-            library.addBook(book2);
-            answer = "Libro: " + book2.getTitle() + ", añadido correctamente.";
-        } catch (BookFoundException e) {
-            answer = e.getMessage();
-        }
-        System.out.println(answer);
-
-        try {
-            library.addBook(book3);
-            answer = "Libro: " + book3.getTitle() + ", añadido correctamente.";
-        } catch (BookFoundException e) {
-            answer = e.getMessage();
-        }
-        System.out.println(answer);
 
         System.out.println("\n   ---- Testeo añadir Libro existente --- ");
         try {
@@ -103,6 +97,8 @@ public class Main {
         }
         System.out.println(answer);
 
+        books.add(book4);
+
         System.out.println("\n   --- Añadir Libro existente en Índice Correcto --- ");
         try {
             library.addBookAt(book2, 1);
@@ -133,35 +129,14 @@ public class Main {
 
 
         System.out.println("\n   *** Eliminar Libro *** ");
-        try {
-            library.removeBookByTitle("Inés del Alma Mía");
-            answer = "Libro: Inés del Alma Mía eliminado correctamente.";
-        } catch (NoBooksOnLibraryException | BookNotFoundException e) {
-            answer = e.getMessage();
+        for (Book book : books) {
+            try {
+                library.removeBookByTitle(book.getTitle());
+                System.out.println("Libro: " + book.getTitle() + " eliminado correctamente.");
+            } catch (NoBooksOnLibraryException | BookNotFoundException e) {
+                System.out.println(e.getMessage());
+            }
         }
-        System.out.println(answer);
-        try {
-            library.removeBookByTitle("Reinventa las Reglas");
-            answer = "Libro: Reinventa las Reglas eliminado correctamente.";
-        } catch (NoBooksOnLibraryException | BookNotFoundException e) {
-            answer = e.getMessage();
-        }
-        System.out.println(answer);
-        try {
-            library.removeBookByTitle("A Cuento de Nada");
-            answer = "Libro: A Cuento de Nada eliminado correctamente.";
-        } catch (NoBooksOnLibraryException | BookNotFoundException e) {
-            answer = e.getMessage();
-        }
-        System.out.println(answer);
-        try {
-            library.removeBookByTitle("Jugando al Olvido");
-            answer = "Libro: Jugando al Olvido eliminado correctamente.";
-        } catch (NoBooksOnLibraryException | BookNotFoundException e) {
-            answer = e.getMessage();
-        }
-        System.out.println(answer);
-
 
         System.out.println("\n   --- Eliminar Libro en Biblioteca vacía --- ");
         try {
@@ -171,6 +146,6 @@ public class Main {
             answer = e.getMessage();
         }
         System.out.println(answer);
+
     }
 }
-
