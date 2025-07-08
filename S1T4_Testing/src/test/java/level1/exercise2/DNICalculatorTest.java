@@ -24,17 +24,16 @@ public class DNICalculatorTest {
             "86547221, W", //S
             "77445189, D" //A
     })
+
+
     void testCalculateDNI(int dniNumber, char letter) throws AssertionError {
         DNICalculator dniCalculator = new DNICalculator(dniNumber);
         char realLetter = dniCalculator.calculateDniLetter();
-        String errorMessage = "El DNI " + dniNumber + " no se corresponde con la letra " + letter
-                + ". La letra correcta para dicho DNI es " + realLetter + ".";
 
         try {
             assertEquals(letter, realLetter);
-            System.out.println("Datos correctos. DNI: " + dniCalculator.setDni());
         } catch (AssertionError e) {
-            System.out.println(errorMessage);
+            System.out.println(e.getMessage());
         }
     }
 }
