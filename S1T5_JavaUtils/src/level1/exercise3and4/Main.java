@@ -41,9 +41,11 @@ public class Main {
                 System.err.println("Error: debe ingresar un valor numérico (0-3)");
                 choice = -1;
                 scan.nextLine();
-            } catch (IOException e) {
+            } catch (IOException | IllegalArgumentException e) {
                 System.err.println("Error: " + e.getMessage());
             }
-        } while (true);
+
+        }
+        while (true);
     }
 }

@@ -5,16 +5,13 @@
 ## Estructura del Proyecto:
 
 ** Estructura de paquetes **
-
-level1/
-    └── exercise5/
-        ├── SerializationManager.java
-        ├── User.java
-        └── Main.java
-
+    level1/
+        └── exercise5/
+            ├── SerializationManager.java
+            ├── User.java
+            └── Main.java
 
 ** Archivos principales **
-
     - `SerializationManager.java`: Maneja la serialización y deserialización de usuarios.
     - `User.java`: Representa un usuario (implementa Serializable).
     - `Main.java`: Punto de entrada del programa con un menú interactivo.
@@ -23,37 +20,30 @@ level1/
 
 ## Funcionalidades:
 
-** Serializar un usuario y guardarlo en un fichero **
-
+** Serializado de usuario **
    - Solicita los datos del usuario y la ruta para guardar el archivo.
 
-** Deserializar usuarios desde un fichero **
-
+** Deserializado de usuarios **
    - Solicita datos de la ruta donde se encuentra el archivo, y (si los datos son correctos), muestra el contenido por consola.
 
-** Listar archivos .ser en un directorio **
-
+** Listado de archivos `.ser ` **
    - Solicita la ruta del directorio, y (si los existen) lista todos los archivos .ser que contiene.
 
 
 
 ## Instrucciones para Consola:
 
-
 ### Compilación y Ejecución:
 
 ** Abrir un Terminal o Consola **
-
     - Abre una terminal en la carpeta raíz del proyecto (donde está `src`)
-        cd /ruta/completa/a/S1T5_JavaUtils.
+        cd /ruta/completa/a/S1T5_JavaUtils
 
 ** Compila **
-
    - Use el siguiente comando:
         javac src/level1/exercise5/*.java
 
 ** Ejecuta **
-
    - Ejecute el siguiente comando:
         java -cp src level1.exercise5.Main
 
@@ -61,7 +51,7 @@ level1/
 
 ## Uso del Programa:
 
-Al ejecutar, aparecerá este menú:
+### Al ejecutar, aparecerá este menú:
 
 === MENÚ ===
 Elija una opción (0 - 3)
@@ -70,33 +60,28 @@ Elija una opción (0 - 3)
 3. Listar archivos .ser en un directorio;
 0. Salir.
 
-### Serializar un usuario y guardarlo en un fichero:
+** Serializado de usuario **
+    - Seleccione la opción `1` en el menú.
+    - Introduzca: <nombre del usuario>.
+                   <edad del usuario>.
+                   <ruta del archivo> `.ser` donde desea guardarlo (si no incluye extensión, se añade automáticamente).
+    - Salida: mensaje de que se ha generado el archivo correctamente en <ruta>.
 
-1. Seleccione la opción `1` en el menú.
-2. Introduzca: <nombre del usuario>.
-               <edad del usuario>.
-               <ruta del archivo> `.ser` donde desea guardarlo (si no incluye extensión, se añade automáticamente).
-3. Salida: mensaje de que se ha generado el archivo correctamente en <ruta>.
+** Deserializado de usuarios **
+    - Seleccione la opción `2` del menú.
+    - Introduzca <ruta del archivo> `.ser` cuya información desea ver.
+    - Salida: información del usuario guardada dentro del archivo.
 
-
-### Deserializar usuarios desde un fichero:
-
-1. Seleccione la opción `2` del menú.
-2. Introduzca <ruta del archivo> `.ser` cuya información desea ver.
-3. Salida: información del usuario guardada dentro del archivo.
-
-### Listar archivos .ser en un directorio:
-
-1. Seleccione la opción `3` del menú.
-2. Introduzca <ruta del directorio> cuyo listado de archivos .ser desea ver.
-3. Salida: listado de todos los archivos .ser encontrados en la ruta indicada.
+** Listado de archivos `.ser`  **
+    - Seleccione la opción `3` del menú.
+    - Introduzca <ruta del directorio> cuyo listado de archivos `.ser` desea ver.
+    - Salida: listado de todos los archivos `.ser` encontrados en la ruta indicada.
 
 
 
 ## Manejo de Errores relacionados con directorios y rutas:
 
 ** Errores **
-
   - Si la ruta proporcionada está vacía:
         "Error: La ruta no puede estar vacía."
   - Si no se encuentra el archivo:
@@ -107,32 +92,25 @@ Elija una opción (0 - 3)
         "Error. Por favor ingrese un valor numérico (0-3)."
 
 
+
 ## Notas Adicionales:
 
 ** Formatos de ruta **
-
    - Windows: Usa `\\` o `/` en rutas (`C:\\carpeta` o `C:/carpeta`)
    - Linux/macOS: Usa `/` (`/home/usuario`)
 
 ** Auto-completado de extensión **
-
     - Si no se escribe la extensión `.ser`, se agregará automáticamente.
 
 ** Características técnicas **
-
     - Serialización binaria con ObjectOutputStream.
-    - Filtrado inteligente de archivos .ser.
+    - Filtrado inteligente de archivos `.ser`.
     - Validación automática de rutas.
 
 ** Requisitos **
-
     - Java 8 o superior.
     - Permisos de lectura/escritura en los directorios.
 
-## Notas Adicionales:
 
-- Asegúrese de proporcionar rutas válidas y accesibles desde el sistema operativo.
-- El programa es compatible con sistemas operativos Windows, macOS y Linux, siempre que las rutas se introduzcan
-en el formato correcto para cada sistema.
 
 Gracias por su Visita = )
